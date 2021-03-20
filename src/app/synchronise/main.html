@@ -1,0 +1,35 @@
+<div class="content">
+  <form [formGroup]="formGroup">
+    <mat-form-field class="content__section email">
+      <mat-label>ID</mat-label><br>
+      <input matInput type="text" formControlName="id">
+    </mat-form-field><br>
+    <mat-form-field class="content__section password">
+      <mat-label>Password</mat-label><br>
+      <input matInput type="password" formControlName="password">
+    </mat-form-field><br>
+    <mat-form-field class="content__section memberNumber1">
+      <mat-label>memberNumber1</mat-label><br>
+      <input matInput type="text" formControlName="memberNumber1">
+    </mat-form-field><br>
+    <mat-form-field class="content__section memberNumber2">
+      <mat-label>memberNumber2</mat-label><br>
+      <input matInput type="text" formControlName="memberNumber2">
+    </mat-form-field><br>
+    <mat-form-field class="content__section memberNumber3">
+      <mat-label>memberNumber3</mat-label><br>
+      <input matInput type="text" formControlName="memberNumber3">
+    </mat-form-field><br>
+  </form>
+  <button mat-flat-button (click)="onSubmit()">奨学金情報取得</button><br>
+  <!-- テスト用 -->
+  <mat-label>テスト用</mat-label>
+  <div class="" *ngIf="(state$|async)?.model as scholarship">
+    <div class="">
+      <mat-label>残支払回数</mat-label>{{ scholarship.numberOfRemainingTimes }}<mat-label></mat-label>
+    </div>
+    <div class="">
+      <mat-label>残支払金額</mat-label><mat-label>{{ scholarship.remainingAmount }}</mat-label>
+    </div>
+  </div>
+</div>
