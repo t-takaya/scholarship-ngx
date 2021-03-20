@@ -9,6 +9,15 @@
 
 # dependencies
 node_modules
+tool
+e2e
+browserslist
+karma.conf.js
+sass-lint.yml
+tsconfig.app.json
+tsconfig.json
+tsconfig.spec.json
+tslint.json
 yarn.lock
 
 # profiling files

@@ -5,18 +5,15 @@ import { RouterModule }                   from '@angular/router'
 import { BrowserModule }                  from '@angular/platform-browser'
 import { BrowserAnimationsModule }        from '@angular/platform-browser/animations'
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field'
-
 import { NgxsModule }                       from '@ngxs/store'
 import { NgxsLoggerPluginModule }           from '@ngxs/logger-plugin'
 import { NgxsEmitPluginModule }             from '@ngxs-labs/emitter'
 import { NgxsSelectSnapshotModule }         from '@ngxs-labs/select-snapshot'
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core'
 import { TranslateHttpLoader }              from '@ngx-translate/http-loader'
+import { AppComponent }                     from './app'
+import { AppModule }                        from './app/app.module'
 
-import { AppComponent } from './app'
-import { AppModule }    from './app/app.module'
-
-// Setting sassets path
 declare const $
 declare const __webpack_require__
 
@@ -27,13 +24,10 @@ export const env = {
   production: false
 }
 
-// AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, deployUrl + 'assets/i18n/')
 }
 
-// Module Registry
-//~~~~~~~~~~~~~~~~~
 const MODULES = [
   HttpClientModule,
   RouterModule.forRoot([]),
@@ -53,8 +47,6 @@ const MODULES = [
   AppModule
 ]
 
-// Main Module
-//~~~~~~~~~~~~~
 @NgModule({
   imports:      MODULES,
   declarations: [ AppComponent ],

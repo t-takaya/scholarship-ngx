@@ -35,9 +35,7 @@
               "src/styles/main.scss"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "shared/scss"
-              ]
+              "includePaths": []
             },
             "allowedCommonJsDependencies": [
               "@bugsnag/js"
@@ -45,12 +43,7 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "shared/src/etc/env.ts",
-                  "with": "shared/src/etc/env.prod.ts"
-                }
-              ],
+              "fileReplacements": [],
               "optimization": true,
               "outputHashing": "none",
               "sourceMap": false,
